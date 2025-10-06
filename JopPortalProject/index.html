@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SPPU Percentage Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <style>
+        /* ====== Page Background ====== */
+        html, body {
+            overflow-x: hidden;                   /* ✅ removes horizontal scrollbar */
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        body {
+            background-image: url('/images/degree-cap1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ====== Transparent Header & Footer ====== */
+        header, footer {
+            background: rgba(255, 255, 255, 0.2); /* translucent white */
+            backdrop-filter: blur(6px);           /* frosted glass effect */
+            -webkit-backdrop-filter: blur(6px);   /* Safari support */
+            border: none;
+            box-shadow: none;
+            color: #000;                          /* readable text */
+        }
+
+        footer {
+            margin-top: auto;                     /* pushes footer to bottom */
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* ====== Main Content Card ====== */
+        .main-content {
+            background: rgba(255,255,255,0.93);
+            border-radius: 20px;
+            box-shadow: 0 6px 32px rgba(0,0,0,0.09);
+            padding: 2em 1.5em;
+            max-width: 380px;
+            margin: 8% auto 0 auto;
+            text-align: center;
+        }
+
+        /* ====== Buttons ====== */
+        .btn-convert {
+            width: 85%;
+            margin: 1em 0;
+            padding: 12px;
+            border-radius: 7px;
+            font-size: 1.13em;
+        }
+
+        /* ====== Responsive Adjustments ====== */
+        @media (max-width:768px) {
+            .main-content {
+                margin: 14% 1vw 0 1vw;
+                max-width: 96vw;
+            }
+        }
+    </style>
+</head>
+<body>
+<div th:replace="header :: header"></div>
+
+<div class="main-content">
+    <h2>Welcome to SPPU Percentage Converter</h2>
+    <p class="mb-4">Choose your conversion type:</p>
+    <a th:href="@{/cgpa-to-percentage}" class="btn btn-primary btn-convert">CGPA to Percentage</a>
+    <a th:href="@{/sgpa-to-percentage}" class="btn btn-success btn-convert">SGPA to Percentage</a>
+</div>
+
+<div th:replace="footer :: footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
