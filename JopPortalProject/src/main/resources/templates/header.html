@@ -1,0 +1,16 @@
+<header th:fragment="header" xmlns:th="http://www.w3.org/1999/xhtml">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark border-bottom">
+        <div class="container">
+            <a class="navbar-brand" th:href="@{/}">SPPU Percentage Converter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" th:href="@{/cgpa-to-percentage}">CGPA Conversion</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/sgpa-to-percentage}">SGPA Conversion</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

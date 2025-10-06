@@ -1,0 +1,101 @@
+/* Background with degree cap image */
+body {
+    background: url('static/images/degree-cap.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+    header, footer {
+            background: rgba(255, 255, 255, 0.2); /* translucent white */
+            backdrop-filter: blur(6px);           /* frosted glass effect */
+            -webkit-backdrop-filter: blur(6px);   /* Safari support */
+            border: none;
+            box-shadow: none;
+            color: #000;                          /* readable text */
+        }
+
+        footer {
+            margin-top: auto;                     /* pushes footer to bottom */
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+/* Container box for form and main content */
+.container, .main-content {
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 400px;
+    margin: 7% auto;
+    padding: 2em 2.5em;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+    text-align: center;
+}
+
+/* Responsive container for homepage */
+.main-content {
+    max-width: 380px;
+    margin: 8% auto 0 auto;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.09);
+}
+
+/* Input fields and buttons style */
+input[type="number"], button {
+    width: 90%;
+    margin: 0.4em 0;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #bcbcbc;
+    font-size: 1rem;
+}
+
+/* Button styling */
+button {
+    background: #28427b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e3360;
+}
+
+/* Specific button styles for homepage */
+.btn-convert {
+    width: 85%;
+    margin: 1em 0;
+    padding: 12px;
+    border-radius: 7px;
+    font-size: 1.13em;
+}
+
+/* Footer styling */
+/*footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}*/
+
+/* Navbar customizations */
+.navbar {
+    border-bottom: 1px solid #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container, .main-content {
+        margin: 14% 1vw 0 1vw;
+        max-width: 96vw;
+        padding: 1.5em 1.5em;
+    }
+}
+@media (max-width: 480px) {
+    input[type="number"], button {
+        width: 100%;
+    }
+}
